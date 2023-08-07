@@ -21,7 +21,7 @@ source ~/.bashrc
 
 source /opt/intel/oneapi/mkl/2023.2.0/env/vars.sh
 
-echo "export LD_LIBRARY_PATH=${MKL_LIB_PATH}:${OMP_LIB_PATH}" >> $HOME/.bashrc 
+echo "export LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2023.2.0/lib/intel64:/opt/intel/oneapi/mkl/2023.2.0/lib/intel64" >> $HOME/.bashrc 
 
 source ~/.bashrc
 
@@ -88,9 +88,9 @@ make -j6 install  2>&1 | tee  log.make.install
 
 echo "" >> $HOME/.bashrc
 echo "### elmer ###" >> $HOME/.bashrc
-echo "export ELMER_HOME=$HOME/elmer/install/" >> $HOME/.bashrc 
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ELMER_HOME/lib" >> $HOME/.bashrc 
-echo "export PATH=$PATH:$ELMER_HOME/bin" >> $HOME/.bashrc 
+echo "export ELMER_HOME=/home/alex/elmer/install/" >> $HOME/.bashrc 
+echo "export LD_LIBRARY_PATH=/opt/intel/oneapi/mkl/2023.2.0/lib/intel64:/opt/intel/oneapi/mkl/2023.2.0/lib/intel64:/home/alex/elmer/install//lib:/home/alex/elmer/install//lib" >> $HOME/.bashrc 
+echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/alex/elmer/install//bin:/home/alex/elmer/install//bin" >> $HOME/.bashrc 
 
 source ~/.bashrc
 
