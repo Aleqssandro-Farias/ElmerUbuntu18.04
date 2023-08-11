@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ~/
 sudo apt autoremove intel-basekit 
 
